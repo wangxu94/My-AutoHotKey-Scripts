@@ -135,5 +135,7 @@ Win + Alt + s Suspend script
 
 ### Added corrections
 Capitalise common names
+
 Capitalise country names
+
 Correct US to UK spellings
