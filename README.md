@@ -1,9 +1,8 @@
 # My-AutoHotKey-Scripts
-My AutoHotKey Scripts
 
 AutoHotKey scripts for my personal use
 
-"Current" directory contains scripts in current use
+"Current" directory contains the latest scripts in current use
 ## MyHotKeys.ahk
 
 
@@ -125,7 +124,7 @@ Resumme script: Win + Alt + z
 
 
 ## AutoCorrect.ahk
-Based on http://www.autohotkey.com/download/AutoCorrect.ahk with US to UK spellings and my own corrections
+Based on http://www.autohotkey.com/download/AutoCorrect.ahk with some additions
 
 ### Functions
 Win + h: Add correction
@@ -133,3 +132,8 @@ Win + h: Add correction
 Win + Alt + h: Reload script
 
 Win + Alt + s Suspend script
+
+### Added corrections
+Capitalise common names
+Capitalise country names
+Correct US to UK spellings
