@@ -740,7 +740,7 @@ return
 ;}
 
 ; --------------------------------
-; Xplorer2
+; MultiCommander
 ; --------------------------------
 
 #e:: Run, "C:\Program Files\MultiCommander (x64)\MultiCommander.exe"

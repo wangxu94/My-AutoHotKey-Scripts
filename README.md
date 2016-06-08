@@ -1,12 +1,15 @@
 # My-AutoHotKey-Scripts
 My AutoHotKey Scripts
+
 AutoHotKey scripts for my personal use
+
 "Current" directory contains scripts in current use
 ## MyHotKeys.ahk
 
 
 ### Hot Corners
 Credit to https://www.reddit.com/r/Windows10/comments/3ivdvu/how_could_i_activate_task_view_with_a_hot_corner/cynfido
+
 Toggle Windows 10 Task View when mouse to top left corner
 
 
@@ -109,6 +112,7 @@ Show context menu with CapsLock + r
 
 #### Requirements
 nircmd
+
 http://www.nirsoft.net/utils/nircmd.html
 
 
