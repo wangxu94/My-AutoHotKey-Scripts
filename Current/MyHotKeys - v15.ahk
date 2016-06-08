@@ -979,6 +979,17 @@ $RButton::MouseClick, right
 +WheelUp::SendInput {LAlt down}{LShift down}{Tab}{LAlt up}{LShift up}
 */
 
+
+;-————————————-
+; Arrange Windows
+;—————————————
+
+CapsLock & 1::SendInput {LWin Down}{Left}{LWin Up}
+CapsLock & 2::SendInput {LWin Down}{Down}{LWin Up}
+CapsLock & 3::SendInput {LWin Down}{Up}{LWin Up}
+CapsLock & 4::SendInput {LWin Down}{Right}{LWin Up}
+
+
 ;----------------------------------------
 ; RIGHT CLICK
 ;----------------------------------------
