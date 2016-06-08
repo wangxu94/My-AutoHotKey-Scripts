@@ -1,0 +1,19 @@
+	; OneNote Specific
+	
+	#IfWinActive, ahk_class Framework::CFrame ; {
+		#IfWinExist VIM-Mode Activated ; {
+	    j:: 
+    {
+        SendInput ^{Down %inputNumber%}
+        resetInputNumber()
+        return
+    }
+    k:: 
+    {
+        SendInput ^{Up %inputNumber%}
+        resetInputNumber()
+        return
+    }
+	#IfWinExist ; }
+	#IfWinActive ; }
+	
