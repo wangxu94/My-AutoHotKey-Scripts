@@ -979,6 +979,39 @@ $RButton::MouseClick, right
 +WheelUp::SendInput {LAlt down}{LShift down}{Tab}{LAlt up}{LShift up}
 */
 
+
+;-————————————-
+; Arrange Windows
+;—————————————
+
+CapsLock & 1::SendInput {LWin Down}{Left}{LWin Up}
+CapsLock & 2::SendInput {LWin Down}{Down}{LWin Up}
+CapsLock & 3::SendInput {LWin Down}{Up}{LWin Up}
+CapsLock & 4::SendInput {LWin Down}{Right}{LWin Up}
+
+
+;—————————————
+; Media Controls
+;—————————————
+
+CapsLock & p::SendInput {Media_Play_Pause}
+
+; MPC-HC Specific
+
+CapsLock & [::
+MediaPlayerClassicHC_JumpForward()
+	{
+	SendMessage,0x0111,902,,,ahk_class MediaPlayerClassicW
+	}
+Return
+
+CapsLock & o::
+MediaPlayerClassicHC_JumpBackward()
+	{
+	SendMessage,0x0111,901,,,ahk_class MediaPlayerClassicW
+	}
+Return
+
 ;----------------------------------------
 ; RIGHT CLICK
 ;----------------------------------------
