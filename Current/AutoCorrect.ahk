@@ -7894,7 +7894,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::trademark::trade mark
 ::regardig::regarding
 ::contractt::contract
-:C:P::plaintiff
+:C1:Pl::plaintiff
 :C:D::defendant
 :C:Ps::plaintiffs
 :C:Ds::defendants
@@ -8076,3 +8076,9 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::srevices::services
 ::somme::some
 ::wwith::with
+::neighoburs::neighbours
+::binidng::binding
+::timme::time
+::ouf::out
+::joinnt::joint
+::claimms::claims
