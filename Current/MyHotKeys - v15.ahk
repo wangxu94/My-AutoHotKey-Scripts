@@ -196,6 +196,8 @@ GetKeyState, state, Shift
 		else
 			SendInput ^{Up}		
 		return
+	^t::
+		return
 	}
 #IfWinActive
 }
@@ -1035,6 +1037,7 @@ CapsLock & r::SendInput {AppsKey}
 ; ------------------------------------
 
 #!r::Reload
+#!e::Edit
 
 #!x::
 Suspend, On

@@ -60,6 +60,7 @@
 #SingleInstance force
 !#s::Suspend
 #!h::Reload
+#!j::Edit
 
 ;------------------------------------------------------------------------------
 ; Auto Capitalise first word of new sentence
@@ -1564,8 +1565,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::professionalized::professionalised
 ::professionalizes::professionalises
 ::professionalizing::professionalising
-::program::programme
-::programs::programmes
 ::prolog::prologue
 ::prologs::prologues
 ::propagandize::propagandise
@@ -2190,7 +2189,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::apres::après
 ::arete::arête
 ::attache::attaché
-::attaches::attachés
+; ::attaches::attachés
 ::auto-da-fe::auto-da-fé
 ::belle epoque::belle époque
 ::bete noire::bête noire
@@ -7482,7 +7481,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::Wright::Wright
 ::King::King
 ::Scott::Scott
-::Green::Green
 ::Baker::Baker
 ::Adams::Adams
 ::Nelson::Nelson
@@ -7977,8 +7975,8 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::couirt::court
 ::int his::in this
 ::tirals::trials
-::LCA::Lawyers and Conveyancers Act
-::CCCR::Conduct and Client Care Rules
+:C1:LCA::Lawyers and Conveyancers Act
+:C1:CCCR::Conduct and Client Care Rules
 ::compentent::competent
 :?*:`;l::l
 :?*:l`;::l
@@ -8061,7 +8059,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::psition::position
 ::conserviative::conservative
 ::oucrt::court
-:C1:WM::willmaker
 ::conserviatism::conservatism
 ::relationto::relation to
 ::smmoking::smoking
@@ -8082,3 +8079,36 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::ouf::out
 ::joinnt::joint
 ::claimms::claims
+::fraudulantly::fraudulently
+::aprtner::partner
+::survivng::surviving
+:*?:.om::.com
+::testmentary::testamentary
+::mmixed::mixed
+::comapriing::comparing
+::woul::would
+::mmatter::matter
+::adjurnment::adjournment
+::impropper::improper
+::elemetns::elements
+::csae::case
+::jdgment::judgment
+::litigstion::litigation
+::returnn::return
+::ocurt::court
+::dellivered::delivered
+::admnistrative::administrative
+::ocurt::court
+::obligtion::obligation
+::immediiately::immediately
+::aganst::against
+::agasint::against
+::thhe::the
+::responsibiltiey::responsibility
+::iif::if
+::wilfull::wilful
+:C1:DC::District Court
+::pracitioner::practitioner
+::pwoers::powers
+::commmittee::committee
+::relativsm::relativism
