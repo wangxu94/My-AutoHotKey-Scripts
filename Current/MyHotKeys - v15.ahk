@@ -212,7 +212,8 @@ CapsLock & ,::SendInput {WheelUp}
 CapsLock & n::SendInput {WheelLeft}
 CapsLock & .::SendInput {WheelRight}
 CapsLock & d::SendInput ^{Del}
-
+CapsLock & c::SendInput {BackSpace}
+CapsLock & f::SendInput ^{BackSpace}
 
 ; -------------------------------------
 ; VIM MODE
@@ -678,6 +679,7 @@ if (ProgID = "FirefoxURL")
 ; HOTKEYS
 ;{-----------------------------------------------
 ;
+#InputLevel 1
 ^g::    ; <-- Google Web Search Using Highlighted Text
    Search := 1
    Gosub Google
@@ -692,6 +694,7 @@ return
    Search := 3
    Gosub Google
 return
+#InputLevel 0
 ;}
 
 ; SUBROUTINES
@@ -917,7 +920,7 @@ switchDesktop()
 ; Microsoft word
 ;--------------------------------------
 
-CapsLock & c::SendInput ^+y ; Zotero add/edit citation
+CapsLock & v::SendInput ^+y ; Zotero add/edit citation
 
 
 ;--------------------------------------
@@ -985,12 +988,12 @@ $RButton::MouseClick, right
 ;-————————————-
 ; Arrange Windows
 ;—————————————
-
+/*
 CapsLock & 1::SendInput {LWin Down}{Left}{LWin Up}
 CapsLock & 2::SendInput {LWin Down}{Down}{LWin Up}
 CapsLock & 3::SendInput {LWin Down}{Up}{LWin Up}
 CapsLock & 4::SendInput {LWin Down}{Right}{LWin Up}
-
+*/
 
 ;—————————————
 ; Media Controls
@@ -1025,12 +1028,56 @@ CapsLock & r::SendInput {AppsKey}
 ; --------------------------------------
 ^!m::Run, "C:\Windows\nircmd.exe" cmdwait 1000 monitor off
 
+;------------------------------------
+; Sleep
+;-------------------------------------
+
+^!s::Run, "C:\Windows\nircmd.exe" standby
+
 
 ;-------------------------------------
 ; Backup
 ;-------------------------------------
 
 #!b::Run, "C:\Users\Xu\.babun\cygwin\bin\zsh.exe" C:\Users\Xu\Documents\AHK\backup.sh
+
+;-———————————-
+; ONENOTE SPECIFIC
+;————————————
+
+#IfWinActive, ahk_class Framework::CFrame
+	{
+	SendLevel 0
+	Capslock & t::
+		SendInput ^!1^uTable of Contents{Enter}`-{Space}
+		return
+	CapsLock & g::
+		SendInput ^g
+		return
+	CapsLock & 1::
+		SendInput ^!1
+		return
+	CapsLock & 2::
+		SendInput ^!2
+		return
+	CapsLock & 3::
+		SendInput ^!3
+		return
+	CapsLock & 4::
+		SendInput ^!4
+		return
+	CapsLock & 5::
+		SendInput ^!5
+		return
+	CapsLock & 6::
+		SendInput ^!6
+		return
+	CapsLock & 7::
+		SendInput ^!0
+		return
+	}
+#IfWinActive
+
 
 ; ------------------------------------
 ; SCRIPT ACTIONS
