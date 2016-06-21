@@ -172,7 +172,7 @@ return
 
 #Hotstring R  ; Set the default to be "raw mode" (might not actually be relied upon by anything yet).
 
-
+#InputLevel 1
 ;------------------------------------------------------------------------------
 ; Fix for -ign instead of -ing.
 ; Words to exclude: (could probably do this by return without rewrite)
@@ -466,7 +466,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::beveled::bevelled
 ::bevies::bevvies
 ::bevy::bevvy
-::biased::biassed
 ::biasing::biassing
 ::binging::bingeing
 ::bougainvillea::bougainvillaea
@@ -780,7 +779,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::draftboards::draughtboards
 ::draftier::draughtier
 ::draftiest::draughtiest
-::drafts::draughts
 ::draftsman::draughtsman
 ::draftsmanship::draughtsmanship
 ::draftsmen::draughtsmen
@@ -2173,294 +2171,293 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ; those that may often not be accented either from a clash with an unaccented 
 ; word (resume), or because the unaccented version is now common (cafe).
 ;------------------------------------------------------------------------------
-::aesop::Ã†sop
-::a bas::Ã  bas
-::a la::Ã  la
-::ancien regime::Ancien RÃ©gime
-::angstrom::Ã…ngstrÃ¶m
-::angstroms::Ã…ngstrÃ¶ms
-::anime::animÃ©
-::animes::animÃ©s
-::ao dai::Ã o dÃ¡i
-::apertif::apÃ©rtif
-::apertifs::apÃ©rtifs
-::applique::appliquÃ©
-::appliques::appliquÃ©s
-::apres::aprÃ¨s
-::arete::arÃªte
-::attache::attachÃ©
-; ::attaches::attachÃ©s
-::auto-da-fe::auto-da-fÃ©
-::belle epoque::belle Ã©poque
-::bete noire::bÃªte noire
-::betise::bÃªtise
-::Bjorn::BjÃ¸rn
-::blase::blasÃ©
-::boite::boÃ®te
-::boutonniere::boutonniÃ¨re
-::canape::canapÃ©
-::canapes::canapÃ©s
-::celebre::cÃ©lÃ¨bre
-::celebres::cÃ©lÃ¨bres
-::chaines::chaÃ®nÃ©s
-::cinema verite::cinÃ©ma vÃ©ritÃ©
-::cinemas verite::cinÃ©mas vÃ©ritÃ©
-::cinema verites::cinÃ©ma vÃ©ritÃ©s
-::champs-elysees::Champs-Ã‰lysÃ©es
-::charge d'affaires::chargÃ© d'affaires
-::chateau::chÃ¢teau
-::chateaux::chÃ¢teaux
-::chateaus::chÃ¢teaus
-::cliche::clichÃ©
-::cliched::clichÃ©d
-::cliches::clichÃ©s
-::cloisonne::cloisonnÃ©
-::consomme::consommÃ©
-::consommes::consommÃ©s
-::communique::communiquÃ©
-::communiques::communiquÃ©s
-::confrere::confrÃ¨re
-::confreres::confrÃ¨res
-::cortege::cortÃ¨ge
-::corteges::cortÃ¨ges
-::coup d'etat::coup d'Ã©tat
-::coup d'etats::coup d'Ã©tats
-::coup de tat::coup d'Ã©tat
-::coup de tats::coup d'Ã©tats
-::coup de grace::coup de grÃ¢ce
-::creche::crÃ¨che
-::creches::crÃ¨ches
-::coulee::coulÃ©e
-::coulees::coulÃ©es
-::creme brulee::crÃ¨me brÃ»lÃ©e
-::creme brulees::crÃ¨me brÃ»lÃ©es
-::creme caramel::crÃ¨me caramel
-::creme caramels::crÃ¨me caramels
-::creme de cacao::crÃ¨me de cacao
-::creme de menthe::crÃ¨me de menthe
-::crepe::crÃªpe
-::crepes::crÃªpes
-::creusa::CreÃ¼sa
-::crouton::croÃ»ton
-::croutons::croÃ»tons
-::crudites::cruditÃ©s
-::curacao::curaÃ§ao
-::dais::daÃ¯s
-::daises::daÃ¯ses
-::debacle::dÃ©bÃ¢cle
-::debacles::dÃ©bÃ¢cles
-::debutante::dÃ©butante
-::debutants::dÃ©butants
-::declasse::dÃ©classÃ©
-::decolletage::dÃ©colletage
-::decollete::dÃ©colletÃ©
-::decor::dÃ©cor
-::decors::dÃ©cors
-::decoupage::dÃ©coupage
-::degage::dÃ©gagÃ©
-::deja vu::dÃ©jÃ  vu
-::demode::dÃ©modÃ©
-::denoument::dÃ©noument
-::derailleur::dÃ©railleur
-::derriere::derriÃ¨re
-::deshabille::dÃ©shabillÃ©
-::detente::dÃ©tente
-::diamante::diamantÃ©
-::discotheque::discothÃ¨que
-::discotheques::discothÃ¨ques
-::divorcee::divorcÃ©e
-::divorcees::divorcÃ©es
-::doppelganger::doppelgÃ¤nger
-::doppelgangers::doppelgÃ¤ngers
-::eclair::Ã©clair
-::eclairs::Ã©clairs
-::eclat::Ã©clat
-::el nino::El NiÃ±o
-::elan::Ã©lan
-::emigre::Ã©migrÃ©
-::emigres::Ã©migrÃ©s
-::entree::entrÃ©e
-::entrees::entrÃ©es
-::entrepot::entrepÃ´t
-::entrecote::entrecÃ´te
-::epee::Ã©pÃ©e
-::epees::Ã©pÃ©es
-::etouffee::Ã©touffÃ©e
-::facade::faÃ§ade
-::facades::faÃ§ades
-::fete::fÃªte
-::fetes::fÃªtes
-::faience::faÃ¯ence
-::fiance::fiancÃ©
-::fiances::fiancÃ©s
-::fiancee::fiancÃ©e
-::fiancees::fiancÃ©es
-::filmjolk::filmjÃ¶lk
-::fin de siecle::fin de siÃ¨cle
-::flambe::flambÃ©
-::flambes::flambÃ©s
-::fleche::flÃ¨che
-::Fohn wind::FÃ¶hn wind
-::folie a deux::folie Ã  deux
-::folies a deux::folies Ã  deux
-::fouette::fouettÃ©
-::frappe::frappÃ©
-::frappes::frappÃ©s
-:?*:fraulein::frÃ¤ulein
-:?*:fuhrer::FÃ¼hrer
-::garcon::garÃ§on
-::garcons::garÃ§ons
-::gateau::gÃ¢teau
-::gateaus::gÃ¢teaus
-::gateaux::gÃ¢teaux
-::gemutlichkeit::gemÃ¼tlichkeit
-::glace::glacÃ©
-::glogg::glÃ¶gg
-::gewurztraminer::GewÃ¼rztraminer
-::gotterdammerung::GÃ¶tterdÃ¤mmerung
-::grafenberg spot::GrÃ¤fenberg spot
-::habitue::habituÃ©
-::ingenue::ingÃ©nue
-::jager::jÃ¤ger
-::jalapeno::jalapeÃ±o
-::jalapenos::jalapeÃ±os
-::jardiniere::jardiniÃ¨re
-::krouzek::krouÅ¾ek
-::kummel::kÃ¼mmel
-::kaldolmar::kÃ¥ldolmar
-::landler::lÃ¤ndler
-::langue d'oil::langue d'oÃ¯l
-::la nina::La NiÃ±a
-::litterateur::littÃ©rateur
-::lycee::lycÃ©e
-::macedoine::macÃ©doine
-::macrame::macramÃ©
-::maitre d'hotel::maÃ®tre d'hÃ´tel
-::malaguena::malagueÃ±a
-::manana::maÃ±ana
-::manege::manÃ¨ge
-::manque::manquÃ©
-::materiel::matÃ©riel
-::matinee::matinÃ©e
-::matinees::matinÃ©es
-::melange::mÃ©lange
-::melee::mÃªlÃ©e
-::melees::mÃªlÃ©es
-::menage a trois::mÃ©nage Ã  trois
-::menages a trois::mÃ©nages Ã  trois
-::mesalliance::mÃ©salliance
-::metier::mÃ©tier
-::minaudiere::minaudiÃ¨re
-::mobius strip::MÃ¶bius strip
-::mobius strips::MÃ¶bius strips
-::moire::moirÃ©
-::moireing::moirÃ©ing
-::moires::moirÃ©s
-::motley crue::MÃ¶tley CrÃ¼e
-::motorhead::MotÃ¶rhead
-::naif::naÃ¯f
-::naifs::naÃ¯fs
-::naive::naÃ¯ve
-::naiver::naÃ¯ver
-::naives::naÃ¯ves
-::naivete::naÃ¯vetÃ©
-::nee::nÃ©e
-::negligee::negligÃ©e
-::negligees::negligÃ©es
-::neufchatel cheese::NeufchÃ¢tel cheese
-::nez perce::Nez PercÃ©
-::noÃ«l::NoÃ«l
-::noÃ«ls::NoÃ«ls
-::nÃºmero uno::nÃºmero uno
-::objet trouve::objet trouvÃ©
-::objets trouve::objets trouvÃ©
-::ombre::ombrÃ©
-::ombres::ombrÃ©s
-::omerta::omertÃ 
-::opera bouffe::opÃ©ra bouffe
-::operas bouffe::opÃ©ras bouffe
-::opera comique::opÃ©ra comique
-::operas comique::opÃ©ras comique
-::outre::outrÃ©
-::papier-mache::papier-mÃ¢chÃ©
-::passe::passÃ©
-::piece de resistance::piÃ¨ce de rÃ©sistance
-::pied-a-terre::pied-Ã -terre
-::plisse::plissÃ©
-::pina colada::PiÃ±a Colada
-::pina coladas::PiÃ±a Coladas
-::pinata::piÃ±ata
-::pinatas::piÃ±atas
-::pinon::piÃ±on
-::pinons::piÃ±ons
-::pirana::piraÃ±a
-::pique::piquÃ©
-::piqued::piquÃ©d
-::piÃ¹::piÃ¹
-::plie::pliÃ©
-::precis::prÃ©cis
-::polsa::pÃ¶lsa
-::pret-a-porter::prÃªt-Ã -porter
-::protoge::protÃ©gÃ©
-::protege::protÃ©gÃ©
-::proteged::protÃ©gÃ©d
-::proteges::protÃ©gÃ©s
-::protegee::protÃ©gÃ©e
-::protegees::protÃ©gÃ©es
-::protegeed::protÃ©gÃ©ed
-::puree::purÃ©e
-::pureed::purÃ©ed
-::purees::purÃ©es
-::Quebecois::QuÃ©bÃ©cois
-::raison d'etre::raison d'Ãªtre
-::recherche::recherchÃ©
-::reclame::rÃ©clame
-::rÃ©sume::rÃ©sumÃ©
-::resumÃ©::rÃ©sumÃ©
-::rÃ©sumes::rÃ©sumÃ©s
-::resumÃ©s::rÃ©sumÃ©s
-::retrousse::retroussÃ©
-::risque::risquÃ©
-::riviere::riviÃ¨re
-::roman a clef::roman Ã  clef
-::roue::rouÃ©
-::saute::sautÃ©
-::sauted::sautÃ©d
-::seance::sÃ©ance
-::seances::sÃ©ances
-::senor::seÃ±or
-::senors::seÃ±ors
-::senora::seÃ±ora
-::senoras::seÃ±oras
-::senorita::seÃ±orita
-::senoritas::seÃ±oritas
-::sinn fein::Sinn FÃ©in
-::smorgasbord::smÃ¶rgÃ¥sbord
-::smorgasbords::smÃ¶rgÃ¥sbords
-::smorgastarta::smÃ¶rgÃ¥stÃ¥rta
-::soigne::soignÃ©
-::soiree::soirÃ©e
-::soireed::soirÃ©ed
-::soirees::soirÃ©es
-::souffle::soufflÃ©
-::souffles::soufflÃ©s
-::soupcon::soupÃ§on
-::soupcons::soupÃ§ons
-::surstromming::surstrÃ¶mming
-::tete-a-tete::tÃªte-Ã -tÃªte
-::tete-a-tetes::tÃªte-Ã -tÃªtes
-::touche::touchÃ©
-::tourtiere::tourtiÃ¨re
-::ubermensch::Ãœbermensch
-::ubermensches::Ãœbermensches
-::ventre a terre::ventre Ã  terre
-::vicuna::vicuÃ±a
-::vin rose::vin rosÃ©
-::vins rose::vins rosÃ©
-::vis a vis::vis Ã  vis
-::vis-a-vis::vis-Ã -vis
-::voila::voilÃ  
-
+::aesop::Æsop
+::a bas::à bas
+::a la::à la
+::ancien regime::Ancien Régime
+::angstrom::Ångström
+::angstroms::Ångströms
+::anime::animé
+::animes::animés
+::ao dai::ào dái
+::apertif::apértif
+::apertifs::apértifs
+::applique::appliqué
+::appliques::appliqués
+::apres::après
+::arete::arête
+::attache::attaché
+::attaches::attachés
+::auto-da-fe::auto-da-fé
+::belle epoque::belle époque
+::bete noire::bête noire
+::betise::bêtise
+::Bjorn::Bjørn
+::blase::blasé
+::boite::boîte
+::boutonniere::boutonnière
+::canape::canapé
+::canapes::canapés
+::celebre::célèbre
+::celebres::célèbres
+::chaines::chaînés
+::cinema verite::cinéma vérité
+::cinemas verite::cinémas vérité
+::cinema verites::cinéma vérités
+::champs-elysees::Champs-Élysées
+::charge d'affaires::chargé d'affaires
+::chateau::château
+::chateaux::châteaux
+::chateaus::châteaus
+::cliche::cliché
+::cliched::clichéd
+::cliches::clichés
+::cloisonne::cloisonné
+::consomme::consommé
+::consommes::consommés
+::communique::communiqué
+::communiques::communiqués
+::confrere::confrère
+::confreres::confrères
+::cortege::cortège
+::corteges::cortèges
+::coup d'etat::coup d'état
+::coup d'etats::coup d'états
+::coup de tat::coup d'état
+::coup de tats::coup d'états
+::coup de grace::coup de grâce
+::creche::crèche
+::creches::crèches
+::coulee::coulée
+::coulees::coulées
+::creme brulee::crème brûlée
+::creme brulees::crème brûlées
+::creme caramel::crème caramel
+::creme caramels::crème caramels
+::creme de cacao::crème de cacao
+::creme de menthe::crème de menthe
+::crepe::crêpe
+::crepes::crêpes
+::creusa::Creüsa
+::crouton::croûton
+::croutons::croûtons
+::crudites::crudités
+::curacao::curaçao
+::dais::daïs
+::daises::daïses
+::debacle::débâcle
+::debacles::débâcles
+::debutante::débutante
+::debutants::débutants
+::declasse::déclassé
+::decolletage::décolletage
+::decollete::décolleté
+::decor::décor
+::decors::décors
+::decoupage::découpage
+::degage::dégagé
+::deja vu::déjà vu
+::demode::démodé
+::denoument::dénoument
+::derailleur::dérailleur
+::derriere::derrière
+::deshabille::déshabillé
+::detente::détente
+::diamante::diamanté
+::discotheque::discothèque
+::discotheques::discothèques
+::divorcee::divorcée
+::divorcees::divorcées
+::doppelganger::doppelgänger
+::doppelgangers::doppelgängers
+::eclair::éclair
+::eclairs::éclairs
+::eclat::éclat
+::el nino::El Niño
+::elan::élan
+::emigre::émigré
+::emigres::émigrés
+::entree::entrée
+::entrees::entrées
+::entrepot::entrepôt
+::entrecote::entrecôte
+::epee::épée
+::epees::épées
+::etouffee::étouffée
+::facade::façade
+::facades::façades
+::fete::fête
+::fetes::fêtes
+::faience::faïence
+::fiance::fiancé
+::fiances::fiancés
+::fiancee::fiancée
+::fiancees::fiancées
+::filmjolk::filmjölk
+::fin de siecle::fin de siècle
+::flambe::flambé
+::flambes::flambés
+::fleche::flèche
+::Fohn wind::Föhn wind
+::folie a deux::folie à deux
+::folies a deux::folies à deux
+::fouette::fouetté
+::frappe::frappé
+::frappes::frappés
+:?*:fraulein::fräulein
+:?*:fuhrer::Führer
+::garcon::garçon
+::garcons::garçons
+::gateau::gâteau
+::gateaus::gâteaus
+::gateaux::gâteaux
+::gemutlichkeit::gemütlichkeit
+::glace::glacé
+::glogg::glögg
+::gewurztraminer::Gewürztraminer
+::gotterdammerung::Götterdämmerung
+::grafenberg spot::Gräfenberg spot
+::habitue::habitué
+::ingenue::ingénue
+::jager::jäger
+::jalapeno::jalapeño
+::jalapenos::jalapeños
+::jardiniere::jardinière
+::krouzek::krouek
+::kummel::kümmel
+::kaldolmar::kåldolmar
+::landler::ländler
+::langue d'oil::langue d'oïl
+::la nina::La Niña
+::litterateur::littérateur
+::lycee::lycée
+::macedoine::macédoine
+::macrame::macramé
+::maitre d'hotel::maître d'hôtel
+::malaguena::malagueña
+::manana::mañana
+::manege::manège
+::manque::manqué
+::materiel::matériel
+::matinee::matinée
+::matinees::matinées
+::melange::mélange
+::melee::mêlée
+::melees::mêlées
+::menage a trois::ménage à trois
+::menages a trois::ménages à trois
+::mesalliance::mésalliance
+::metier::métier
+::minaudiere::minaudière
+::mobius strip::Möbius strip
+::mobius strips::Möbius strips
+::moire::moiré
+::moireing::moiréing
+::moires::moirés
+::motley crue::Mötley Crüe
+::motorhead::Motörhead
+::naif::naïf
+::naifs::naïfs
+::naive::naïve
+::naiver::naïver
+::naives::naïves
+::naivete::naïveté
+::nee::née
+::negligee::negligée
+::negligees::negligées
+::neufchatel cheese::Neufchâtel cheese
+::nez perce::Nez Percé
+::noël::Noël
+::noëls::Noëls
+::número uno::número uno
+::objet trouve::objet trouvé
+::objets trouve::objets trouvé
+::ombre::ombré
+::ombres::ombrés
+::omerta::omertà
+::opera bouffe::opéra bouffe
+::operas bouffe::opéras bouffe
+::opera comique::opéra comique
+::operas comique::opéras comique
+::outre::outré
+::papier-mache::papier-mâché
+::passe::passé
+::piece de resistance::pièce de résistance
+::pied-a-terre::pied-à-terre
+::plisse::plissé
+::pina colada::Piña Colada
+::pina coladas::Piña Coladas
+::pinata::piñata
+::pinatas::piñatas
+::pinon::piñon
+::pinons::piñons
+::pirana::piraña
+::pique::piqué
+::piqued::piquéd
+::più::più
+::plie::plié
+::precis::précis
+::polsa::pölsa
+::pret-a-porter::prêt-à-porter
+::protoge::protégé
+::protege::protégé
+::proteged::protégéd
+::proteges::protégés
+::protegee::protégée
+::protegees::protégées
+::protegeed::protégéed
+::puree::purée
+::pureed::puréed
+::purees::purées
+::Quebecois::Québécois
+::raison d'etre::raison d'être
+::recherche::recherché
+::reclame::réclame
+::résume::résumé
+::resumé::résumé
+::résumes::résumés
+::resumés::résumés
+::retrousse::retroussé
+::risque::risqué
+::riviere::rivière
+::roman a clef::roman à clef
+::roue::roué
+::saute::sauté
+::sauted::sautéd
+::seance::séance
+::seances::séances
+::senor::señor
+::senors::señors
+::senora::señora
+::senoras::señoras
+::senorita::señorita
+::senoritas::señoritas
+::sinn fein::Sinn Féin
+::smorgasbord::smörgåsbord
+::smorgasbords::smörgåsbords
+::smorgastarta::smörgåstårta
+::soigne::soigné
+::soiree::soirée
+::soireed::soiréed
+::soirees::soirées
+::souffle::soufflé
+::souffles::soufflés
+::soupcon::soupçon
+::soupcons::soupçons
+::surstromming::surströmming
+::tete-a-tete::tête-à-tête
+::tete-a-tetes::tête-à-têtes
+::touche::touché
+::tourtiere::tourtière
+::ubermensch::Übermensch
+::ubermensches::Übermensches
+::ventre a terre::ventre à terre
+::vicuna::vicuña
+::vin rose::vin rosé
+::vins rose::vins rosé
+::vis a vis::vis à vis
+::vis-a-vis::vis-à-vis
+::voila::voilà 
 ;------------------------------------------------------------------------------
 ; Common Misspellings - the main list
 ;------------------------------------------------------------------------------
@@ -7892,7 +7889,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::trademark::trade mark
 ::regardig::regarding
 ::contractt::contract
-:C1:Pl::plaintiff
+:C:Pl::plaintiff
 :C:D::defendant
 :C:Ps::plaintiffs
 :C:Ds::defendants
@@ -7969,9 +7966,9 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::importrant::important
 ::iun::in
 ::acess::access
-:C*:(C)::Â©
-:C*:(TM)::â„¢
-:C*:(R)::Â®
+:C*:(C)::©
+:C*:(TM)::™
+:C*:(R)::®
 ::couirt::court
 ::int his::in this
 ::tirals::trials
@@ -8065,7 +8062,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::prority::priority
 ::recovation::revocation
 :C1:WM::will-maker
-::`-`-::â€”
 ::rekationships::relationships
 ::estent::extent
 ::wil::will
@@ -8112,3 +8108,11 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::pwoers::powers
 ::commmittee::committee
 ::relativsm::relativism
+::requriements::requirements
+:*:-`-::—
+::roudns::rounds
+::biassed::biased
+::proeprty::property
+::descendents::descendants
+:C:TC::Testamentary Capacity
+::eidtion::edition
