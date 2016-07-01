@@ -383,6 +383,16 @@ Return ; }}}
         resetInputNumber()
         return
     }
+	+g::
+	{
+		SendInput ^{End}
+		Return
+	}
+	g::
+	{
+		SendInput ^{Home}
+		Return
+	}
     x:: 
     {
         SendInput {Delete %inputNumber%}
@@ -1039,7 +1049,15 @@ CapsLock & r::SendInput {AppsKey}
 ; Backup
 ;-------------------------------------
 
-#!b::Run, "C:\Users\Xu\.babun\cygwin\bin\zsh.exe" C:\Users\Xu\Documents\AHK\backup.sh
+#!b::Run, bash -c "/home/wangxu/backup.sh"
+
+
+;———————————
+; urxvt
+;———————————
+
+CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtdc &)"
+
 
 ;-———————————-
 ; ONENOTE SPECIFIC
