@@ -196,8 +196,6 @@ GetKeyState, state, Shift
 		else
 			SendInput ^{Up}		
 		return
-	^t::
-		return
 	}
 #IfWinActive
 }
@@ -209,8 +207,8 @@ Capslock & /::SendInput ^f
 Capslock & x::SendInput {Del}
 CapsLock & m::SendInput {WheelDown}
 CapsLock & ,::SendInput {WheelUp}
-CapsLock & n::SendInput {WheelLeft}
-CapsLock & .::SendInput {WheelRight}
+; CapsLock & n::SendInput {WheelLeft}
+; CapsLock & .::SendInput {WheelRight}
 CapsLock & d::SendInput ^{Del}
 CapsLock & c::SendInput {BackSpace}
 CapsLock & f::SendInput ^{BackSpace}
@@ -427,6 +425,18 @@ Return ; }}}
         resetInputNumber()
         return
     }
+	m::
+	{
+		SendInput {WheelDown}
+		resetInputNumber()
+        return
+	}
+	,::
+	{
+		SendInput {WheelUp}
+		resetInputNumber()
+        return
+	}
 
     ; selection movements with Shift
     +h:: 
@@ -758,7 +768,27 @@ return
 ; MultiCommander
 ; --------------------------------
 
-#e:: Run, "C:\Program Files\MultiCommander (x64)\MultiCommander.exe"
+;#e:: Run, "C:\Program Files\MultiCommander (x64)\MultiCommander.exe"
+
+; --------------------------------
+; Open with GVim
+; --------------------------------
+
+CapsLock & v:: 
+Send, ^c
+ClipWait ;waits for the clipboard to have content
+Run, C:\Program Files (x86)\Vim\vim74\gvim.exe "%clipboard%"
+Return 
+
+; --------------------------------
+; Open with Notepad++
+; --------------------------------
+
+CapsLock & e:: 
+Send, ^c
+ClipWait ;waits for the clipboard to have content
+Run, C:\Program Files (x86)\Notepad++\notepad++.exe "%clipboard%"
+Return 
 
 ; --------------------------------
 ; SWITCH VIRTUAL DESKTOP
@@ -930,14 +960,14 @@ switchDesktop()
 ; Microsoft word
 ;--------------------------------------
 
-CapsLock & v::SendInput ^+y ; Zotero add/edit citation
+CapsLock & q::SendInput ^+y ; Zotero add/edit citation
 
 
 ;--------------------------------------
 ; Word Count
 ;--------------------------------------
 
-CapsLock & e::
+^e::
 ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice. 
 Clipboard :=  
 Send ^c 
@@ -1056,7 +1086,7 @@ CapsLock & r::SendInput {AppsKey}
 ; urxvt
 ;———————————
 
-CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtdc &)"
+CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtc &)"
 
 
 ;-———————————-
@@ -1066,9 +1096,9 @@ CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtdc &)"
 #IfWinActive, ahk_class Framework::CFrame
 	{
 	SendLevel 0
-	Capslock & t::
-		SendInput ^!1^uTable of Contents{Enter}`-{Space}
-		return
+;	Capslock & t::
+;		SendInput ^!1^uTable of Contents{Enter}`-{Space}
+;		return
 	CapsLock & g::
 		SendInput ^g
 		return
@@ -1092,6 +1122,8 @@ CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtdc &)"
 		return
 	CapsLock & 7::
 		SendInput ^!0
+		return
+	^t::
 		return
 	}
 #IfWinActive
