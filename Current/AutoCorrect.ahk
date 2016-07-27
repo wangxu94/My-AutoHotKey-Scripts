@@ -568,7 +568,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::checkbook::chequebook
 ::checkbooks::chequebooks
 ::checkered::chequered
-::checks::cheques
 ::chili::chilli
 ::chimera::chimaera
 ::chimeras::chimaeras
@@ -958,16 +957,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::galvanizing::galvanising
 ::gamboled::gambolled
 ::gamboling::gambolling
-::jail::gaol
-::jailbird::gaolbird
-::jailbirds::gaolbirds
-::jailbreak::gaolbreak
-::jailbreaks::gaolbreaks
-::jailed::gaoled
-::jailer::gaoler
-::jailers::gaolers
-::jailing::gaoling
-::jails::gaols
 ::gasses::gases
 ::gage::gauge
 ::gaged::gauged
@@ -1504,8 +1493,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::philosophized::philosophised
 ::philosophizes::philosophises
 ::philosophizing::philosophising
-::filter::philtre
-::filters::philtres
 ::phony ::phoney 
 ::plagiarize::plagiarise
 ::plagiarized::plagiarised
@@ -2018,7 +2005,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::vulgarized::vulgarised
 ::vulgarizes::vulgarises
 ::vulgarizing::vulgarising
-::wagon::waggon
 ::wagons::waggons
 ::watercolor::watercolour
 ::watercolors::watercolours
@@ -8116,3 +8102,28 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::descendents::descendants
 :C:TC::Testamentary Capacity
 ::eidtion::edition
+:*:]shrug::¯\_(?)_/¯
+::irrelevant::irrelevant 
+::liaility::liability
+::aapplication::application
+::equipemtn::equipment
+::ahd::had
+::occurrance::occurrence
+::invident::incident
+::greivance::grievance
+::ccollecting::collecting
+::ratio::
+::casued::caused
+::makig::making
+::deicsion::decision
+::specialy::specially
+::excerbated::exacerbated
+::meidcal::medical
+::msut::must
+::vehivle::vehicle
+::bargaiing::bargaining 
+::phsyical::physical
+::emploument::employment
+::jrisdiction::jurisdiction
+::challened::challenged
+::eiither::either
