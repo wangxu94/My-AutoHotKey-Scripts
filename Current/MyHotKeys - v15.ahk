@@ -123,6 +123,7 @@ HotCorners:
     }
 
 
+
 ; ----------------------------------------------------
 ; VIM NAVIGATION WITH CAPSLOCK
 ; ---------------------------------------------------
@@ -770,6 +771,7 @@ return
 
 ;#e:: Run, "C:\Program Files\MultiCommander (x64)\MultiCommander.exe"
 
+/*
 ; --------------------------------
 ; Open with GVim
 ; --------------------------------
@@ -789,6 +791,7 @@ Send, ^c
 ClipWait ;waits for the clipboard to have content
 Run, C:\Program Files (x86)\Notepad++\notepad++.exe "%clipboard%"
 Return 
+*/
 
 ; --------------------------------
 ; SWITCH VIRTUAL DESKTOP
@@ -967,7 +970,7 @@ CapsLock & q::SendInput ^+y ; Zotero add/edit citation
 ; Word Count
 ;--------------------------------------
 
-^e::
+CapsLock & e::
 ClipSaved := ClipboardAll   ; Save the entire clipboard to a variable of your choice. 
 Clipboard :=  
 Send ^c 
@@ -1024,22 +1027,16 @@ $RButton::MouseClick, right
 +WheelUp::SendInput {LAlt down}{LShift down}{Tab}{LAlt up}{LShift up}
 */
 
-
-;-————————————-
-; Arrange Windows
-;—————————————
-/*
-CapsLock & 1::SendInput {LWin Down}{Left}{LWin Up}
-CapsLock & 2::SendInput {LWin Down}{Down}{LWin Up}
-CapsLock & 3::SendInput {LWin Down}{Up}{LWin Up}
-CapsLock & 4::SendInput {LWin Down}{Right}{LWin Up}
-*/
-
 ;—————————————
 ; Media Controls
 ;—————————————
 
 CapsLock & p::SendInput {Media_Play_Pause}
+CapsLock & MButton::SendInput {Media_Play_Pause}
+CapsLock & RButton::SendInput {Media_Next}
+CapsLock & LButton::SendInput {Media_Prev}
++WheelDown::SendInput {Volume_Down}
++WheelUp::SendInput {Volume_Up}
 
 ; MPC-HC Specific
 
@@ -1088,6 +1085,32 @@ CapsLock & r::SendInput {AppsKey}
 
 CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtc &)"
 
+
+;----------------------------------------
+; Horizontal Scrolling
+;----------------------------------------
+CapsLock & WheelUp:: 
+	; Scroll to the left
+	MouseGetPos,,,id, fcontrol,1
+	Loop 8 ; <-- Increase for faster scrolling
+		SendMessage, 0x114, 0, 0, %fcontrol%, ahk_id %id% ; 0x114 is WM_HSCROLL and the 0 after it is SB_LINERIGHT.
+return
+ 
+CapsLock & WheelDown:: 
+	;Scroll to the right
+	MouseGetPos,,,id, fcontrol,1
+	Loop 8 ; <-- Increase for faster scrolling
+		SendMessage, 0x114, 1, 0, %fcontrol%, ahk_id %id% ;  0x114 is WM_HSCROLL and the 1 after it is SB_LINELEFT.
+return
+
+;-------------------------------------------
+; Fast scrolling
+;-------------------------------------------
+
+;^!WheelDown::SendInput, {WheelDown 10}
+;^!WheelUp::SendInput, {WheelUp 10}
+^!WheelDown::SendInput, {Pgdn}
+^!WheelUp::SendInput, {Pgup}
 
 ;-———————————-
 ; ONENOTE SPECIFIC
