@@ -8127,3 +8127,11 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::jrisdiction::jurisdiction
 ::challened::challenged
 ::eiither::either
+::connsequence::consequence
+::setor::sector
+::regorm::reform
+::polie::police
+::oftne::often
+::leste::Leste
+::faiiled::failed
+::dmages::damages
