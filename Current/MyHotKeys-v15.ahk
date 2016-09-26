@@ -964,6 +964,12 @@ switchDesktop()
 ;--------------------------------------
 
 CapsLock & q::SendInput ^+y ; Zotero add/edit citation
+CapsLock & s::
+SendInput, ^s
+Sleep, 1000
+Run, bash -c "/home/wangxu/workbackup.sh"
+Return
+
 
 
 ;--------------------------------------
@@ -1037,6 +1043,9 @@ CapsLock & RButton::SendInput {Media_Next}
 CapsLock & LButton::SendInput {Media_Prev}
 +WheelDown::SendInput {Volume_Down}
 +WheelUp::SendInput {Volume_Up}
+*MButton:: SendInput {Blind}{MButton}
+MButton & WheelDown::SendInput {Volume_Down}
+MButton & WheelUp::SendInput {Volume_Up}
 
 ; MPC-HC Specific
 
@@ -1107,8 +1116,10 @@ return
 ; Fast scrolling
 ;-------------------------------------------
 
-;^!WheelDown::SendInput, {WheelDown 10}
-;^!WheelUp::SendInput, {WheelUp 10}
+;NumpadSub & WheelDown::SendInput, {WheelDown 10}
+;NumpadSub & WheelUp::SendInput, {WheelUp 10}
+RButton & WheelDown::SendInput, {WheelDown 10}
+RButton & WheelUp::SendInput, {WheelUp 10}
 ^!WheelDown::SendInput, {Pgdn}
 ^!WheelUp::SendInput, {Pgup}
 
