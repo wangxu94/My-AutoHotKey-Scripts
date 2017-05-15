@@ -1,9 +1,6 @@
 #NoEnv  ; Recommended for performance and compatibility with future AutoHotkey releases.
 SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
-;#Include C:\Users\xwang\Documents\My-AutoHotKey-Scripts\Current\MusicBeeIPC ; the path to the MusicBeeIPC SDK
-#Include %A_ScriptDir%\MusicBeeIPC ; the path to the MusicBeeIPC SDK
-#Include MusicBeeIPC.ahk
 
 ; ---------------------------
 ; HOT CORNERS
@@ -966,99 +963,8 @@ switchDesktop()
 ; Microsoft word
 ;--------------------------------------
 
-#IfWinActive, ahk_exe WINWORD.exe
-
 CapsLock & q::SendInput ^+y ; Zotero add/edit citation
 
-; Save and backup
-CapsLock & s::
-SendInput, ^s
-Sleep, 1000
-Run, bash -c "/home/wangxu/workbackup.sh"
-Return
-
-; Set indents and alignment
-CapsLock & g::
-SendInput {LAlt}
-SendInput {p}
-SendInput {p}
-SendInput {g}
-SendInput {j}
-SendInput {Tab 2}
-SendInput {0}
-SendInput {Tab}
-SendInput {0}
-SendInput {Tab}
-SendInput {Down}
-SendInput {first}
-SendInput, {Tab}
-SendInput, 0.63
-; Set line and paragraph spacing
-SendInput {Tab 3}
-SendInput, 6 pt
-SendInput {Tab}
-SendInput, {Down}
-SendInput, {m}
-SendInput {Tab}
-SendInput, 1.5
-SendInput {Enter}
-; Set font and size
-SendInput {LAlt}
-SendInput {h}
-SendInput {f}
-SendInput {n}
-SendInput Times New Roman
-SendInput {tab}
-SendInput Regular
-SendInput {tab}
-SendInput 12
-SendInput {Enter}
-
-Return
-
-; Set long quotation formatting
-CapsLock & v::
-;set indentation
-SendInput {LAlt}
-SendInput {p}
-SendInput {p}
-SendInput {g}
-SendInput {Tab 2}
-SendInput, 1
-SendInput {Tab}
-SendInput, 1
-SendInput {Tab}
-SendInput {(}
-SendInput {Enter}
-SendInput {Enter}
-; Set font and size
-SendInput {LAlt}
-SendInput {h}
-SendInput {f}
-SendInput {n}
-SendInput Times New Roman
-SendInput {tab}
-SendInput Regular
-SendInput {tab}
-SendInput 11
-SendInput {Enter}
-return
-
-; Paragraph numbering
-CapsLock & z::
-SendInput {]}
-SendInput {Space}
-SendInput ^{Down}
-SendInput ^{b}
-SendInput {[}
-Return
-
-; Navigation
-CapsLock & f::SendInput ^{BackSpace}
-CapsLock & m::SendInput ^{Down}
-CapsLock & ,::SendInput ^{Up}
-
-#IfWinActive
 
 ;--------------------------------------
 ; Word Count
@@ -1088,59 +994,51 @@ SetTimer, RemoveToolTip, Off
 ToolTip
 Return
 
+
 ; --------------------------------
 ; SWITCH TABS
 ; --------------------------------
 
-^WheelDown::
-	MouseGetPos,,, hwnd 
-	WinActivate, ahk_id %hwnd%
-	SendInput {LCtrl down}{Tab}{LCtrl up}
-Return
-^WheelUp::
-	MouseGetPos,,, hwnd 
-	WinActivate, ahk_id %hwnd%
-	SendInput {LCtrl down}{LShift down}{Tab}{LCtrl up}{LShift up}
-Return	
+^WheelDown::SendInput {LCtrl down}{Tab}{LCtrl up}
+^WheelUp::SendInput {LCtrl down}{LShift down}{Tab}{LCtrl up}{LShift up}
 ^k::SendInput {LCtrl down}{Tab}{LCtrl up}
 ^j::SendInput {LCtrl down}{LShift down}{Tab}{LCtrl up}{LShift up}
 
 ; ----------------------------------
 ; MINIMISE WINDOW
 ; ----------------------------------
-
 CapsLock & `::WinMinimize,A
 `::SendInput {LAlt down}{Tab}{LAlt up}
+
 
 ;--------------------------------------
 ; SWITCH WINDOWS
 ;--------------------------------------
+/*
+MButton::AltTabMenu
+WheelDown::AltTab
+WheelUp::ShiftAltTab
+*/
 
 Rbutton & LButton::AltTab
 $RButton::MouseClick, right
+/*
++WheelDown::SendInput {LAlt down}{Tab}{LAlt up}
++WheelUp::SendInput {LAlt down}{LShift down}{Tab}{LAlt up}{LShift up}
+*/
 
 ;—————————————
 ; Media Controls
 ;—————————————
 
-;CapsLock & p::SendInput {Media_Play_Pause}
+CapsLock & p::SendInput {Media_Play_Pause}
 CapsLock & MButton::SendInput {Media_Play_Pause}
 CapsLock & RButton::SendInput {Media_Next}
 CapsLock & LButton::SendInput {Media_Prev}
 +WheelDown::SendInput {Volume_Down}
 +WheelUp::SendInput {Volume_Up}
-*MButton:: SendInput {Blind}{MButton}
-MButton & WheelDown::SendInput {Volume_Down}
-MButton & WheelUp::SendInput {Volume_Up}
 
 ; MPC-HC Specific
-
-CapsLock & p::
-MediaPlayerClassicHC_PlayPause()
-	{
-	SendMessage,0x0111,889,,,ahk_class MediaPlayerClassicW
-	}
-Return
 
 CapsLock & [::
 MediaPlayerClassicHC_JumpForward()
@@ -1165,7 +1063,6 @@ CapsLock & r::SendInput {AppsKey}
 ; --------------------------------------
 ; MONITOR OFF
 ; --------------------------------------
-
 ^!m::Run, "C:\Windows\nircmd.exe" cmdwait 1000 monitor off
 
 ;------------------------------------
@@ -1186,13 +1083,12 @@ CapsLock & r::SendInput {AppsKey}
 ; urxvt
 ;———————————
 
-;CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtc &)"
+CapsLock & t::Run, bash.exe ~ -c "(DISPLAY=:0 urxvtc &)"
 
 
 ;----------------------------------------
 ; Horizontal Scrolling
 ;----------------------------------------
-
 CapsLock & WheelUp:: 
 	; Scroll to the left
 	MouseGetPos,,,id, fcontrol,1
@@ -1211,10 +1107,8 @@ return
 ; Fast scrolling
 ;-------------------------------------------
 
-;NumpadSub & WheelDown::SendInput, {WheelDown 10}
-;NumpadSub & WheelUp::SendInput, {WheelUp 10}
-RButton & WheelDown::SendInput, {WheelDown 10}
-RButton & WheelUp::SendInput, {WheelUp 10}
+;^!WheelDown::SendInput, {WheelDown 10}
+;^!WheelUp::SendInput, {WheelUp 10}
 ^!WheelDown::SendInput, {Pgdn}
 ^!WheelUp::SendInput, {Pgup}
 
@@ -1257,133 +1151,6 @@ RButton & WheelUp::SendInput, {WheelUp 10}
 	}
 #IfWinActive
 
-;––––––––––––––––––––––––––
-;MUSICBEE
-;––––––––––––––––––––––––––
-
-#IfWinNotExist, ahk_exe MusicBee.exe
-; Play/Pause
-CapsLock & \::
-	Run, "C:\Program Files (x86)\MusicBee\MusicBee.exe"
-	Sleep, 2000
-	MB_PlayPause()
-return
-
-#IfWinExist, ahk_exe MusicBee.exe
-
-; Play/Pause
-CapsLock & \::
-	MB_PlayPause()
-return
-
-; Previous Song
-CapsLock & Numpad7::
-    MB_PreviousTrack()
-return
-
-; Stop
-CapsLock & Numpad8::
-    MB_Stop()
-return
-
-; Stop at end of song
-CapsLock & NumpadDot::
-    MB_StopAfterCurrent()
-return
-
-; Next Song
-CapsLock & Numpad9::
-    MB_NextTrack()
-return
-/*
-; Rate 1 star
-CapsLock & Numpad1::
-	f := MB_GetFileUrl()
-	r := MB_GetFileTag(MBMD_Rating)
-	MB_Library_SetFileTag(ByRef "%f%", MBMD_Rating, ByRef 5)
-	MB_Library_CommitTagsToFile(ByRef "%f%")
-return
-*/
-
-; Show Now Playing
-CapsLock & ]::
-	title := MB_GetFileTag(MBMD_TrackTitle)
-	artist := MB_GetFileTag(MBMD_PrimaryArtist)
-	album := MB_GetFileTag(MBMD_Album)
-	year := MB_GetFileTag(MBMD_Year)
-	rating := MB_GetFileTag(MBMD_Rating)
-	albumRating := MB_GetFileTag(MBMD_RatingAlbum)/20
-	albumRating:=albumRating*10
-	albumRating:=Floor(albumRating)
-	SetFormat Float, 0.1
-	albumRating:=albumRating/10
-	If (MB_GetStopAfterCurrentEnabled() > 0)
-	{
-	MsgBox, , Now Playing, Title: %title%`nArtist: %artist%`nAlbum: %album% [%year%]`nRating: %rating%`nAlbum Rating: %albumRating%`nStopping playback after current track,
-	}
-	Else
-	{
-	MsgBox, , Now Playing, Title: %title%`nArtist: %artist%`nAlbum: %album% [%year%]`nRating: %rating%`nAlbum Rating: %albumRating%,
-	}
-return
-
-; Rate 1 star
-CapsLock & Numpad1::
-    ControlSend, ahk_parent, {Numpad1}, ahk_exe MusicBee.exe
-return
-
-; Rate 2 stars
-CapsLock & Numpad2::
-    ControlSend, ahk_parent, {Numpad2}, ahk_exe MusicBee.exe
-return
-
-; Rate 3 stars
-CapsLock & Numpad3::
-    ControlSend, ahk_parent, {Numpad3}, ahk_exe MusicBee.exe
-return
-
-; Rate 4 stars
-CapsLock & Numpad4::
-    ControlSend, ahk_parent, {Numpad4}, ahk_exe MusicBee.exe
-return
-
-; Rate 5 stars
-CapsLock & Numpad5::
-    ControlSend, ahk_parent, {Numpad5}, ahk_exe MusicBee.exe
-return
-
-; Rate 0 stars
-CapsLock & Numpad0::
-    ControlSend, ahk_parent, {Numpad0}, ahk_exe MusicBee.exe
-return
-
-; Unrated
-CapsLock & NumpadMult::
-    ControlSend, ahk_parent, {NumpadMult}, ahk_exe MusicBee.exe
-return
-
-; Rate 0.5 stars up
-CapsLock & NumpadAdd::
-    ControlSend, ahk_parent, {NumpadAdd}, ahk_exe MusicBee.exe
-return
-
-; Rate 0.5 stars down
-CapsLock & NumpadSub::
-    ControlSend, ahk_parent, {NumpadSub}, ahk_exe MusicBee.exe
-return
-
-; Toggle Love
-CapsLock & NumpadDiv::
-    ControlSend, ahk_parent, {NumpadDiv}, ahk_exe MusicBee.exe
-return
-
-; Exit MusicBee
-CapsLock & NumpadEnter::
-    MB_Stop()
-	Run, taskkill /f /im "MusicBee.exe"
-Return
-
-#IfWinExist
 
 ; ------------------------------------
 ; SCRIPT ACTIONS

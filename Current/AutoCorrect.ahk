@@ -2049,6 +2049,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 :?:sice::sive
 :?:t eh:: the
 :?:t hem:: them
+:?:metn::ment
 
 
 ;------------------------------------------------------------------------------
@@ -7483,7 +7484,6 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::Ward::Ward
 ::Cox::Cox
 ::Richardson::Richardson
-::Wood::Wood
 ::Watson::Watson
 ::Brooks::Brooks
 ::Bennett::Bennett
@@ -7803,8 +7803,8 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::infringeing::infringing
 ::slef::self
 :C1:CoA::Court of Appeal
-:C1:SuC::Supreme Court
-:C1:HC::High Court
+:C:SC::Supreme Court
+:C:HC::High Court
 ::woulf::would
 ::wich::which
 ::traveling::travelling
@@ -7891,7 +7891,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::appraoch::approach
 :?*:ouo::ou
 :?*:tino::tion
-:?*:yu::y
+;:?*:yu::y
 ::qoute::quote
 ::htat::that
 ::promisses::promises
@@ -7948,7 +7948,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::onne::one
 ::mmust::must
 ::of he::of the
-:?:tio::tion
+;:?:tio::tion
 ::retrospecitivty::retrospectivity
 ::Ltd::Ltd
 ::amterials::materials
@@ -8040,7 +8040,7 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::responsibiltiey::responsibility
 ::iif::if
 ::wilfull::wilful
-:C1:DC::District Court
+:C:DC::District Court
 ::pracitioner::practitioner
 ::pwoers::powers
 ::commmittee::committee
@@ -8118,3 +8118,49 @@ return  ; This makes the above hotstrings do nothing so that they override the i
 ::interfeered::interfered
 ::comclusion::conclusion
 ::necesssarily::necessarily
+::circusmtances::circumstances
+::treatmetn::treatment
+::commmon::common
+::interferencce::interference
+::wihtout::without
+::obtaiined::obtained
+::equillibrium::equilibrium
+::innnocent::innocent
+::veracty::veracity
+::respinse::response
+::challegne::challenge
+::identifiaction::identification
+::circusmtances::circumstances
+::tirla::trial
+::helld::held
+::mmind::mind
+::damange::damage
+::alcool::alcohol 
+::insantiy::insanity
+::Jduge::Judge
+::finidngs::findings
+::adjurn::adjourn
+::ancourage::encourage
+::supproted::supported
+::fiarness::fairness
+::trasnactions::transactions
+::chocie::choice
+::disclosyre::disclosure
+::treatemnt::treatme\nt
+::elnding::lending
+::otehrwise::otherwise
+::queastion::question
+::arragements::arrangements
+::bargining::bargaining
+::tarvel::travel
+::amnagement::management
+::oculd::could
+::brith::birth
+::chidlren::children
+::susbequently::subsequently
+::htan::than
+::righst::rights
+::motnhs::months
+::ot::to
+::thye::they
+::themselevs::themselves
